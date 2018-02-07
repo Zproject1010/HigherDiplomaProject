@@ -77,17 +77,17 @@ p{
 	top: 0;
 	opacity: 0;
 	position: absolute;
-	width: 100%;
-	height: 75%;
-	background: linear-gradient(0deg, white, pink);
+	width: 85%;
+	height: 82%;
+	background: linear-gradient(0deg, white, #333);
 	transition: height 1s;
-	margin-left:-15px;
+	
 	
 }
 .product:hover .mask{
 	opacity: 0.5;
 	display: block;
-	height: 75%;
+	height: 82%;
 }
 .product a:hover {
 	color: red;
@@ -124,7 +124,7 @@ p{
 .icon1:hover, .icon3:hover {
 	transform: rotate(360deg);
 	transition: all 0.5s;
-	background: #ff4455;
+	background: #333;
 	color: white;
 }
 .product:after {
