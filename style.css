@@ -14,14 +14,14 @@ p{
 	text-align:justify;}
 
 #header{
-	background:#FFF;
+	background:#000;
 	border-bottom:1px solid #999;
 	box-shadow:0px 5px 5px #ccc;}
 #main-header{
 	display: block;
 	padding:0;
 	padding-bottom:0 !important;
-	background: #009966;}
+	background:#000;}
 #logo h1{
 	margin:0;}
 #logo button{
@@ -39,28 +39,64 @@ p{
 	padding:0;
 	height: 50px;
 	}	
-#menu ul{
-	margin:0;
-	padding: 0;}			
-#menu ul li{
-	float:left;
-	list-style:none;
-	line-height:70px;
-	padding:0 20px;
-	}
-#menu ul li a{
-	font-size:15px;
-	color:#fff;
-	text-transform:uppercase;
-	}
-#menu li a:hover{
-	color:#ff9600;}
+#menu ul {
+  background:#000;
+  list-style-type: none;
+  text-align: center;
+}
+#menu li {
+  color:#f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  font-weight:bold;
+  
+  font-size:18px;
+  color: #FFF;
+  display: block;
+}
+#menu a:onclick{
+	background:#f1f1f1;
+	color:#000;
+}
+#menu a:hover {
+  background:#f1f1f1;
+  color:#333;
+}
 
+/*==Dropdown Menu==*/
+.sub-menu {
+  display:none;
+  position: absolute;
+}
+#menu li {
+  position: relative;
+}
+#menu li:hover .sub-menu {
+  display: block;
+  
+}
+.sub-menu li {
+	
+  margin-left: 0 !important;
+}
+
+/*==Menu cấp 3==*/
+.sub-menu > ul {
+  display: block !mportant;
+}
 #body{
 	margin-top: 30px;
 }
 #search{
 	padding-top: 15px;
+	margin-left: 100px;
+	width:400px
 }
 .products{
 	overflow: hidden;
@@ -127,17 +163,7 @@ p{
 	background: #333;
 	color: white;
 }
-.product:after {
-	content:"";
-	width: 0;
-	height: 5px;
-	background: #ff4455;
-	display: block;
-	transition: width 1s;
-}
-.product:hover:after {
-	width: 100%;
-}
+
 .product p {
 	font-weight: bold;
 }
