@@ -46,7 +46,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 						<?php while($row_menu=mysql_fetch_array($query_menu)){
-						   echo '<li><a href="index.php?view=category&id=<?php'. $row_menu['catalogue_id'].' ?>">';
+						   echo '<li><a href="index.php?view=category&id='. $row_menu['catalogue_id'].' ">';
 						 
 						   echo $row_menu['catalogue_name'];
 						   echo '<p class="arrow-right"></p>';
