@@ -15,6 +15,7 @@ p{
 
 #header{
 	background:#000;
+	height:130px;
 	border-bottom:1px solid #999;
 	box-shadow:0px 5px 5px #ccc;}
 #main-header{
@@ -34,9 +35,9 @@ p{
 	border-right:1px solid #999;
 	}	
 #logo button span{
-	background:#999;}	
+	background:#999;}
 #menu{
-	padding:0;
+	padding-top:15px;
 	height: 50px;
 	}	
 #menu ul {
@@ -44,66 +45,41 @@ p{
   list-style-type: none;
   text-align: center;
 }
+
+#menu:after {
+	display: none;
+}
+
 #menu li {
-  color:#f1f1f1;
+  color:#000;
   display: inline-block;
-  width: 120px;
+  width: 100px;
   height: 40px;
   line-height: 40px;
   margin-left: -5px;
 }
 #menu a {
   text-decoration: none;
-  font-weight:bold;
+
   
-  font-size:18px;
+  font-size:15px;
   color: #FFF;
   display: block;
 }
-#menu a:onclick{
-	background:#f1f1f1;
-	color:#000;
-}
+
 #menu a:hover {
   background:#f1f1f1;
   color:#333;
 }
 
-/*==Dropdown Menu==*/
-.sub-menu {
-  display:none;
-  position: absolute;
-}
-#menu li {
-  position: relative;
-}
-#menu li:hover .sub-menu {
-  display: block;
-  
-}
-.sub-menu li {
-	
-  margin-left: 0 !important;
-}
 
-/*==Menu cấp 3==*/
-.sub-menu > ul {
-  display: block !mportant;
-}
-#body{
-	margin-top: 30px;
-}
-#search{
-	padding-top: 15px;
-	margin-left: 100px;
-	width:400px
-}
 .products{
 	overflow: hidden;
 	margin-top: 15px;
 }
+
 .product {
-	border: 1px solid #ffe3e6;
+	border: 1px solidn #ffe3e6;
 	position: relative;
 	margin-right:5px;
 }
@@ -168,7 +144,7 @@ p{
 	font-weight: bold;
 }
 .products h2{
-	border-bottom:2px solid #009966;
+	border-bottom:2px solid #000;
 	margin-right:15px;
 	margin-bottom:15px;}	
 .products h2 a{
@@ -176,7 +152,7 @@ p{
 	font-weight:bold;
 	color:#fff;
 	text-transform:uppercase;
-	background:#009966;
+	background:#000;
 	padding:10px;
 	display:table;
 	}
@@ -189,15 +165,114 @@ margin-top:20px;
 	padding-top: 30px;
 }
 #footer-t{
-	background:#009966;
+	background:#000;
 	padding:30px 0;
 	margin-top:15px;}
 .logo{
 	height:98px;
-	background:url(../images/logo.png) no-repeat center;}
+}
 .content-f{
 	color:#FFF;
 	text-align:justify;}
 .content-f h3{
 	font-size:18px;
 	text-transform:capitalize;}	
+
+.menu-01 >li {
+	width: auto !important;
+	height: auto !important;	
+}
+
+.menu-01 .dropdown-menu li {
+	width: 100% !important;
+	height: auto !important;
+}
+
+.menu-01 .dropdown-menu li a{
+	transition: all 0.3s ease-in-out;
+	border: 1px solid #000;	
+}
+
+.menu-01 .dropdown-menu li a:active {
+	color: #000;
+}
+	
+.menu-01 .dropdown .dropdown-menu{
+	
+	display: block !important;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	visibility: hidden;
+	position: absolute;
+	left: -20px;
+}
+
+.menu-01 .dropdown .dropdown-menu li {
+	position: relative;
+}
+
+.menu-01 .dropdown .dropdown-menu li:hover .sub-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.menu-01 .dropdown .dropdown-menu .sub-menu {
+	margin-left:10px;
+	margin-top:10px;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+	min-width: 100%;
+}
+
+.menu-01 .dropdown a:active {
+	color: #000;
+}
+.dropdown {
+	position:relative;
+}
+
+.dropdown:hover .dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+	left: 0;
+	}
+	
+.navbar-right li a {
+	color: #fff;
+	transition: all 0.3s ease-in-out;
+}
+
+.navbar-right li a:hover {
+	color: #000;
+}
+
+.navbar-right li a:hover .glyphicon {
+	color:#000;
+}
+
+.navbar-right li a .glyphicon {
+	color: #fff;
+	transition: all 0.3s ease-in-out;
+}
+
+.navbar-right {
+	margin-right: 0;
+	
+}
+.header-top {
+	overflow: hidden;
+}
+.arrow-right {
+  width: 0; 
+  height: 0;
+  margin-top:5px;
+  float:right; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  
+  border-left: 5px solid white;
+}
