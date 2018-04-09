@@ -23,6 +23,7 @@ p{
 	padding:0;
 	padding-bottom:0 !important;
 	background:#000;}
+	
 #logo h1{
 	margin:0;}
 #logo button{
@@ -36,6 +37,33 @@ p{
 	}	
 #logo button span{
 	background:#999;}
+	#fixmenu{
+    width: 1122px;
+    height:30px;
+    margin-left:-48px;
+    padding:5px 48px;
+    position:fixed;
+    top:0;
+    background:#7eb7d9;
+    display:none;
+}
+     
+.menu-fixed{
+    width: 260px;
+    float: right;
+    text-align: right;
+    padding:4px 0 5px 0;
+    list-style-type:none;
+}
+ 
+.menu-fixed li{ display:inline; }
+ 
+.menu-fixed a{
+    ont-size:0.9em;
+    color:#fff; 
+    text-shadow:1px 1px #5E8BC5;
+    padding:0 0 0 10px;
+}
 #menu{
 	padding-top:15px;
 	height: 50px;

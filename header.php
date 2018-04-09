@@ -1,9 +1,11 @@
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
      <?php 
 		include('config.php');
 	?> 
 
 <div id="header" >
-    	<div id="main-header" >
+   	<div id="main-header" >
         	<div>
             	<div id="logo" class="col-md-3 col-sm-12 col-xs-12 text-center">
             		<h1><a href="index.php"><img src="images/Logo/logo.png" width="224" height="127"></a></h1>
@@ -34,19 +36,19 @@
 					<ul class="nav navbar-nav menu-01">
 					  <li class="active"><a href="index.php"><span class="glyphicons glyphicons-home"></span>Home</a></li>
 					  <li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">About Company <span class="caret"></span></a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">About  <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 						  <li><a href="#">Introduction</a></li>
 						  <li><a href="#">Promotions</a></li>
 						</ul>
 					  </li>
-					  <li><a href="#">Lookbook</a></li>
-					  <li><a href="#">News</a></li>
+					  <li><a href="index.php?view=lookbook">Lookbook</a></li>
+					  <li><a href="index.php?view=news">News</a></li>
 					  <li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 						<?php while($row_menu=mysql_fetch_array($query_menu)){
-						   echo '<li><a href="index.php?view=category&id='. $row_menu['catalogue_id'].' ">';
+						   echo '<li><a href="index.php?view=catalogue&id='. $row_menu['catalogue_id'].' ">';
 						 
 						   echo $row_menu['catalogue_name'];
 						   echo '<p class="arrow-right"></p>';
@@ -55,19 +57,19 @@
 						   $sql_submenu="select * from categories where catalogue_id =". $id;
 						   $query_submenu=mysql_query($sql_submenu);
 						   
-						   if($row_submenu=mysql_fetch_array($query_submenu)) {
+						   
 						   		echo ('<ul class="sub-menu"><li>');
 						   		while($row_submenu=mysql_fetch_array($query_submenu)){
-									echo '<a href="#">'.$row_submenu['category_name'].'</a>';
+									echo '<a href="index.php?view=category&id='.$row_submenu['category_id'].'">'.$row_submenu['category_name'].'</a>';
 						   		}
 								echo ('</li></ul>');
-						   }
+						
 						   
                           	echo '</li>'; 
 						  } ?>
 						</ul>
 					  </li>
-					  <li><a href="#">Cart</a></li>
+					  <li><a href="index.php?view=cart">Cart</a></li>
 					  <li><a href="#">Shop System</a></li>
 					</ul>
 				</div>
@@ -75,3 +77,21 @@
 							</div>
 						</div>
 					</div>
+<!----#fixedMenu---->
+<script type="text/javascript"> 
+$(document).ready(function() {
+    $(window).scroll(function(){
+        if(document.body.scrollTop > 300)
+            $('#fixmenu').fadeIn( "slow", function() { });
+        else    
+            $('#fixmenu').fadeOut( "slow", function() { });
+    });
+ 
+    $('a#srolltotop').click(function(){
+        $('html, body').animate({scrollTop:0}, 100);
+        return false;
+    });
+});
+</script>
+    
+ 
